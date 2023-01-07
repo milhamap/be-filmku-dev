@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const app = express();
 
-// production
 app.use(cookieParser());
 app.use(cors());
 app.use(morgan('dev'));
