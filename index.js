@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 require('dotenv').config();
 
-const roleRouter = require('./routes/roles')
+const roleRouter = require('./src/routes/roles')
 
 const app = express();
 

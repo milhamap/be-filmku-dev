@@ -19,10 +19,27 @@ module.exports = {
                 createdAt: new Date(),
                 updatedAt: new Date()
             })
-            res.status(200).json('Success created new role!');
+            console.log(role)
+            res.status(200).json({
+                message: "Success created new role"
+            });
         } catch (error) {
             res.status(500).json({
                 message: 'Internal Server Error',
+                error: error.message
+            })
+        }
+    },
+    getsRole: async (req, res) => {
+        try {
+            const role = await knex('dbo.roles')
+            res.status(200).json({
+                data: role,
+                message: "Success gets all role"
+            })
+        } catch (error) {
+            res.status(500).json({
+                message: "Internal Server Error",
                 error: error.message
             })
         }
