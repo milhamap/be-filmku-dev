@@ -15,7 +15,9 @@ module.exports = {
             if(validate.length) return res.status(400).json(validate)
             const role = await knex('dbo.roles').insert({
                 random: uuid4(),
-                name: name
+                name: name,
+                createdAt: new Date(),
+                updatedAt: new Date()
             })
             res.status(200).json('Success created new role!');
         } catch (error) {
