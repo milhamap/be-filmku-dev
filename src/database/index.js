@@ -11,9 +11,9 @@ const knex = require('knex')({
         options: {
             encrypt: true,
             enableArithAbort: true,
-            // multipleActiveResultSets: false,
-            // trustServerCertificate: false,
-            // connectionTimeout: 30,
+            multipleActiveResultSets: false,
+            trustServerCertificate: false,
+            connectionTimeout: 30,
         },
         port: 1433
     }
