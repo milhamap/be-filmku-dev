@@ -19,7 +19,6 @@ module.exports = {
                 createdAt: new Date(),
                 updatedAt: new Date()
             })
-            console.log(role)
             res.status(200).json({
                 message: "Success created new role"
             });
